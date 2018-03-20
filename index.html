@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Editor</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-color:#343a40;
+        }
+        .height-98{
+            height:98%;
+        }
+        .height-95{
+            height:95%;
+        }
+        .width-5{
+            width:102%;
+        }
+        .scrollable{
+            overflow:scroll;
+        }
+    </style>
+</head>
+<body class="text-dark">
+    <div class="container-fluid">
+        <div class="row h-50 w-100 fixed-top">
+            <div class="col-6 bg-dark">
+                <div class="bg-dark text-light">
+                    HTML
+                </div>
+                <div class="height-98 scrollable bg-light" id="html" contenteditable></div>
+            </div>
+            <div class="col-6 bg-dark">
+                <div class="bg-dark text-light">
+                    CSS
+                </div>
+                <div class="height-98 scrollable bg-light" id="css" contenteditable></div>
+            </div>
+        </div>
+        <div class="row h-50 w-100 fixed-bottom">
+            <div class="col-6 bg-dark">
+                <div class="bg-dark text-light">
+                    JS
+                </div>
+                <div class="height-98 scrollable bg-light" id="js" contenteditable></div>
+            </div>
+            <div class="col-6 bg-dark">
+                <div class="bg-dark text-light">Output-><button onClick="run()">Run</button></div>
+                <iframe class="height-95 w-100 bg-light" id="output"></iframe>
+            </div>
+        </div>
+        </div>
+</body>
+<script src="js/index.js"></script>
+</html>
